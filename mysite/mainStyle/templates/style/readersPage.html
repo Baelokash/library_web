@@ -1,0 +1,12 @@
+{% extends "style/wrapper.html"%}
+
+{% block content %}
+<div class="dg-image" style="background-image: url('https://images.unsplash.com/photo-1603058817990-2b9a9abbce86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=386&q=80');
+height: 100vh;">
+<h3 style = "text-align:center">Наши читатели:<h3> 
+    {% for el in person%}
+    <div style="background-color: #f4bb03; margin: 15px; padding: 5px 5px 5px; color: #233846;">
+        <h4>  {{el.surname }}  {{ el.name}} {{el.e_mail}}</h4>
+    </div>  
+    {% endfor %}  
+{% endblock %}

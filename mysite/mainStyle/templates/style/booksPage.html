@@ -1,0 +1,17 @@
+{% extends "style/wrapper.html"%}
+
+{% block content %}
+<div class="dg-image" style="background-image: url('https://images.unsplash.com/photo-1511721511189-ca0a98b3229e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80');">
+<h2 style = "text-align:center">Наши Книги:<h2> 
+    {% for el in books%}
+    <div style="background-color: #f4bb03; margin: 15px; padding: 5px 5px 5px; color: #233846;">
+        <h3>  {{el.title }}   <i>{{ el.author}}</i></h3>
+        <div style="background-color: #233846; font-family: 'Tahoma' ; padding: 5px; color: #f4bb03;">
+        <p> Жанр: {{el.category}}     Тип: {{el.type}} Количество страниц: {{el.number_pages}}</p>
+        <p> Количество страниц: {{el.number_pages}}</p>
+        <i> Способ выдачи: {{el.method_issue}}</i>
+        </div>
+    </div>  
+    {% endfor %} 
+    
+{% endblock %}
